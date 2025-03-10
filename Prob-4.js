@@ -122,4 +122,9 @@
 //     return numbers.reduce((acc, num) => acc + num, 0) + extra;
 // }
 
+function updateAge() {
+    setUser(prevUser => ({ ...prevUser, age: 30 }));
+}
+
+
 
