@@ -122,9 +122,24 @@
 //     return numbers.reduce((acc, num) => acc + num, 0) + extra;
 // }
 
-function updateAge() {
-    setUser(prevUser => ({ ...prevUser, age: 30 }));
-}
+// function updateAge() {
+//     setUser(prevUser => ({ ...prevUser, age: 30 }));
+// }
+
+
+function createCounter() {
+    let count = 0; // এটি createCounter-এর লোকাল ভ্যারিয়েবল
+  
+    return function() {
+      count++; // ক্লোজারের কারণে count ভ্যারিয়েবলটি মেমোরিতে থাকে
+      console.log(count);
+    };
+  }
+  
+  const counter = createCounter();
+  counter(); // 1
+  counter(); // 2
+  counter(); // 3
 
 
 
