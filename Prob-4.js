@@ -109,7 +109,7 @@
 // function foo() {
 //     console.log(x);
 //     const x = 20;
-    
+
 // }
 // foo();
 
@@ -127,19 +127,30 @@
 // }
 
 
-function createCounter() {
-    let count = 0; // এটি createCounter-এর লোকাল ভ্যারিয়েবল
-  
-    return function() {
-      count++; // ক্লোজারের কারণে count ভ্যারিয়েবলটি মেমোরিতে থাকে
-      console.log(count);
-    };
+// function createCounter() {
+//     let count = 0; // এটি createCounter-এর লোকাল ভ্যারিয়েবল
+
+//     return function() {
+//       count++; // ক্লোজারের কারণে count ভ্যারিয়েবলটি মেমোরিতে থাকে
+//       console.log(count);
+//     };
+//   }
+
+//   const counter = createCounter();
+//   counter(); // 1
+//   counter(); // 2
+//   counter(); // 3
+
+
+
+const obj = {
+  name: "John",
+  greet: function () {
+    setTimeout(() => {
+      console.log("Hello, " + this.name); // John
+    }, 1000);
   }
-  
-  const counter = createCounter();
-  counter(); // 1
-  counter(); // 2
-  counter(); // 3
+};
 
 
 
