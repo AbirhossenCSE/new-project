@@ -66,3 +66,17 @@
 //     i++;
     
 // }
+// var x = 10;
+// function test() {
+//     console.log(x);
+//     var x = 20;
+    
+// }
+// test()
+
+// let i = 1;
+// while (i < 5) {
+//     console.log(i);
+//     i++;
+    
+// }

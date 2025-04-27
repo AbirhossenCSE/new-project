@@ -143,14 +143,14 @@
 
 
 
-const obj = {
-  name: "John",
-  greet: function () {
-    setTimeout(() => {
-      console.log("Hello, " + this.name); // John
-    }, 1000);
-  }
-};
+// const obj = {
+//   name: "John",
+//   greet: function () {
+//     setTimeout(() => {
+//       console.log("Hello, " + this.name); // John
+//     }, 1000);
+//   }
+// };
 
 
 
